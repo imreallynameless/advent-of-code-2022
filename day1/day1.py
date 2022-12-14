@@ -4,10 +4,9 @@ def day1(file):
     max3 = 0
     current = 0
     with open(file) as f:
-        data = f.readlines()
-        for line in data:
-            if line == '\n':
-                print (current)
+        for line in f:
+            line = line.strip()
+            if line == "":
                 if current >= max:
                     max3 = max2
                     max2 = max
